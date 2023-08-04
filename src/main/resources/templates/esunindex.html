@@ -1,0 +1,63 @@
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>E.SUN｜DevOps測試程式</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/customization.css">
+</head>
+<body>
+	<div id="pageWarpper">
+		<div id="contentWarpper">
+			<!----- Nav ----->
+			<nav>
+				<div id="navPageLogo"><a href="#"><img src="images/logo_white_esun.svg" title="玉山銀行E.SUN Bank"></a></div>
+				<div id="navPageTitle">｜DevOps測試程式</div>
+			</nav>
+			<div id="pageContentWarpper" class="withoutSideMenu">
+				<div id="pageContentContainer">
+					<div class="pageMessageContainer">
+						<div class="messageContentContainer">
+							<div class="messageTextContainer">
+								<table >
+									<thead>
+										<tr>
+											<th colspan="2">網路資訊</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="tdfirst"><strong>Source IP</strong></td>
+											<td th:text="${SourceIP}">無</td>
+										</tr>
+										<tr>
+											<td class="tdfirst"><strong>Domain</strong></td>
+											<td th:text="${HostName}">無</td>
+										</tr>
+										<tr>
+											<td class="tdfirst"><strong>Server IP(Pod IP)</strong></td>
+											<td th:text="${PodIP}">無</td>
+										</tr>
+										<tr>
+											<td class="tdfirst"><strong>Server Name(Pod Name)</strong></td>
+											<td th:text="${PodName}">無</td>
+										</tr>
+										<div th:each="headerList:${headerList}" >
+											<tr>
+												<td class="tdfirst" ><strong th:text="${headerList.key}"></strong></td>
+												<td th:text="${headerList.value}">無</td>
+											</tr>
+										</div>
+									</tbody>
+								</table>	
+							</div>
+						</div>
+					</div>
+				</div><!-- /pageContentContainer -->
+			</div><!-- /pageContentWarpper -->
+		</div><!-- /contentWarpper -->
+	</div><!-- /pageWarpper -->
+</body>
+</html>

@@ -1,0 +1,18 @@
+table{
+    border: 1px solid #333;
+    width: 1050px;
+}
+td {
+    border: 1px solid #333;
+}
+
+.tdfirst{
+    width: 450px;
+}
+
+thead,
+tfoot {
+    background-color: #333;
+    color: #fff;
+}
+
